@@ -4,18 +4,20 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<body>
+  <button id="btn1">Show simple message!</button>
+  <script type="module">
+    import NotificationMessage from './index.js';
 
-<button id="btn1">Show simple message!</button>
+    btn1.addEventListener('click', () => {
+      const notification = new NotificationMessage('Hello World', {
+        duration: 1000,
+        type: 'error'
+      });
 
-<script type="module">
-  import NotificationMessage from './index.js';
-
-  btn1.addEventListener('click', () => {
-    const notification = new NotificationMessage('Hello World', {
-      duration: 2000,
-      type: 'success'
+      notification.show();
     });
+    
+  </script>
+</body>
 
-    notification.show();
-  });
-</script>
