@@ -43,14 +43,20 @@
       sortType: 'number'
     },
     {
-      id: 'sales',
-      title: 'Sales',
+      id: 'enabled',
+      title: 'Status',
       sortable: true,
-      sortType: 'number'
+      sortType: 'boolean'
     },
   ];
 
-  const sortableTable = new SortableTable(header, { data });
+  const sortableTable = new SortableTable(header, { 
+    data,
+    sorted: {
+      id: 'quantity',
+      order: 'asc'
+    }}, 
+  );
 
   root.append(sortableTable.element);
 </script>
