@@ -20,13 +20,6 @@ class Tooltip {
             }
 
             this.tooltipText = target.dataset.tooltip
-            // let coords = target.getBoundingClientRect();
-            // let left = coords.left + 200;
-      
-            // let top = coords.top - 1000;
-            // if (top < 0) {
-            //   top = coords.top + target.offsetHeight + 5;
-            // }
             this.coords.left = e.clientX
             this.coords.top = e.clientY
             
@@ -36,7 +29,7 @@ class Tooltip {
     initOut(){
         document.onpointerout = (e) => {
             this.remove()
-          };
+        };
     }
 
     render(){
