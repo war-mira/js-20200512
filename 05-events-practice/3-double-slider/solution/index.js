@@ -108,6 +108,7 @@ export default class DoubleSlider {
 
     return [...elements].reduce((accum, subElement) => {
       accum[subElement.dataset.element] = subElement;
+      console.log(accum)
 
       return accum;
     }, {});
