@@ -1,6 +1,6 @@
 // import SortableTable from './index';
 // TODO: remove
-import SortableTable from '../solution';
+import SortableTable from './index.js';
 import data from './__mocks__/products-data';
 
 const header = [
